@@ -2,30 +2,41 @@
   "features": [
     {
       "id": 1,
-      "title": "响应式设计",
-      "description": "完美适配各种设备屏幕尺寸"
+      "title": "高性能",
+      "description": "优化的代码结构，确保流畅体验",
+      "icon": "zap"
     },
     {
       "id": 2,
-      "title": "现代化UI",
-      "description": "采用最新的设计趋势和交互体验"
+      "title": "安全性",
+      "description": "内置多重安全防护机制",
+      "icon": "shield"
     },
     {
       "id": 3,
-      "title": "高性能",
-      "description": "基于Vite构建，加载速度快"
+      "title": "用户友好",
+      "description": "直观的界面设计，易于使用",
+      "icon": "heart"
     }
   ],
   "testimonials": [
     {
       "id": 1,
       "name": "张三",
-      "content": "这个页面设计非常棒，用户体验很好！"
+      "role": "产品经理",
+      "content": "这个页面设计非常现代化，用户体验极佳！"
     },
     {
       "id": 2,
       "name": "李四",
-      "content": "简洁而现代的设计风格，我很喜欢。"
+      "role": "开发者",
+      "content": "代码质量很高，很容易维护和扩展。"
+    },
+    {
+      "id": 3,
+      "name": "王五",
+      "role": "设计师",
+      "content": "视觉效果出众，细节处理得很到位。"
     }
   ]
 }

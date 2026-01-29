@@ -16,24 +16,24 @@
 │   └── mock.json                  # 模拟数据
 │
 ├── package.json                   # 项目依赖和脚本配置
-├── vite.config.ts                 # Vite 构建工具配置
-├── tsconfig.json                  # TypeScript 主配置
+├── vite.config.ts                 # Vite 构建工具配置，已修改为生成传统script兼容的JS
+├── tsconfig.json                  # TypeScript 主配置，允许emit输出
 ├── tsconfig.node.json             # TypeScript 节点配置
 ├── tailwind.config.js             # Tailwind CSS 配置
 ├── postcss.config.js              # PostCSS 配置
-└── index.html                     # HTML 入口文件
+└── index.html                     # HTML 入口文件，已修改为引用构建后的JS文件
 ```
 
 ## 文件内容描述
 
 ### 根目录文件
 - `package.json`: 包含项目基本信息、依赖（React、React DOM、React Router DOM、Lucide React）和开发依赖（Vite 6.4.1、TypeScript、Tailwind CSS等）
-- `vite.config.ts`: Vite 构建工具配置，包含 react 插件和服务器配置（host: true, allowedHosts: true）以及构建输出配置
-- `tsconfig.json`: TypeScript 编译选项，支持 ES2020、JSX 等
+- `vite.config.ts`: Vite 构建工具配置，包含 react 插件和服务器配置（host: true, allowedHosts: true）以及构建输出配置，已修改为生成IIFE格式的JS文件，可在script标签中直接使用
+- `tsconfig.json`: TypeScript 编译选项，支持 ES2020、JSX 等，已设置noEmit为false以允许输出编译文件
 - `tsconfig.node.json`: 用于 Vite 配置文件的 TypeScript 编译选项
 - `tailwind.config.js`: Tailwind CSS 配置，包含自定义颜色主题
 - `postcss.config.js`: PostCSS 配置，集成 Tailwind CSS 和 Autoprefixer
-- `index.html`: HTML 入口文件，引用主应用脚本，包含额外的MIME类型处理元标签
+- `index.html`: HTML 入口文件，已修改为引用构建后的/assets/main.js文件，使用传统script标签而非module类型
 
 ### 源代码文件
 - `src/main.tsx`: React 应用入口点，渲染 App 组件
@@ -49,7 +49,7 @@
 3. 交互元素：计数器按钮和其他交互功能
 4. 美观UI：渐变背景、卡片阴影、悬停效果等
 5. 移动优化：专为移动设备设计的布局和交互
-6. Nginx兼容：优化的HTML结构和MIME类型处理
+6. Nginx兼容：已配置为生成可在Nginx直接运行的传统JS文件
 
 ## 技术栈
 
@@ -68,4 +68,4 @@
 
 ## 运行项目
 
-执行 `npm run dev` 启动开发服务器
+执行 `npm run dev` 启动开发服务器，执行 `npm run build` 生成可在Nginx上直接运行的JS文件
