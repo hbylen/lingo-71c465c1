@@ -12,16 +12,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true,
-    target: 'es2015',
-    rollupOptions: {
-      output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
-        format: 'iife',
-        inlineDynamicImports: true
-      }
-    }
+    sourcemap: true
   }
 });
