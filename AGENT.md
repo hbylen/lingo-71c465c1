@@ -27,13 +27,13 @@
 ## 文件内容描述
 
 ### 根目录文件
-- `package.json`: 包含项目基本信息、依赖（React、React DOM、React Router DOM、Lucide React、Date FNS）和开发依赖（Vite 6.4.1、TypeScript、Tailwind CSS等）
-- `vite.config.ts`: Vite 构建工具配置，包含 react 插件和服务器配置（host: true, allowedHosts: true）
+- `package.json`: 包含项目基本信息、依赖（React、React DOM、React Router DOM、Lucide React）和开发依赖（Vite 6.4.1、TypeScript、Tailwind CSS等）
+- `vite.config.ts`: Vite 构建工具配置，包含 react 插件和服务器配置（host: true, allowedHosts: true）以及构建输出配置
 - `tsconfig.json`: TypeScript 编译选项，支持 ES2020、JSX 等
 - `tsconfig.node.json`: 用于 Vite 配置文件的 TypeScript 编译选项
 - `tailwind.config.js`: Tailwind CSS 配置，包含自定义颜色主题
 - `postcss.config.js`: PostCSS 配置，集成 Tailwind CSS 和 Autoprefixer
-- `index.html`: HTML 入口文件，引用主应用脚本
+- `index.html`: HTML 入口文件，引用主应用脚本，包含额外的MIME类型处理元标签
 
 ### 源代码文件
 - `src/main.tsx`: React 应用入口点，渲染 App 组件
@@ -49,6 +49,7 @@
 3. 交互元素：计数器按钮和其他交互功能
 4. 美观UI：渐变背景、卡片阴影、悬停效果等
 5. 移动优化：专为移动设备设计的布局和交互
+6. Nginx兼容：优化的HTML结构和MIME类型处理
 
 ## 技术栈
 

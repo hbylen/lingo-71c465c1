@@ -3,34 +3,29 @@
     {
       "id": 1,
       "title": "响应式设计",
-      "description": "完美适配各种屏幕尺寸，提供最佳的移动体验",
-      "icon": "heart"
+      "description": "完美适配各种设备屏幕尺寸"
     },
     {
       "id": 2,
-      "title": "快速加载",
-      "description": "优化性能，确保页面快速响应和流畅体验",
-      "icon": "zap"
+      "title": "现代化UI",
+      "description": "采用最新的设计趋势和交互体验"
     },
     {
       "id": 3,
-      "title": "用户友好",
-      "description": "简洁直观的界面设计，易于使用和导航",
-      "icon": "coffee"
+      "title": "高性能",
+      "description": "基于Vite构建，加载速度快"
     }
   ],
   "testimonials": [
     {
       "id": 1,
       "name": "张三",
-      "content": "这个H5页面设计得非常棒，用户体验很好，加载速度也很快！",
-      "rating": 5
+      "content": "这个页面设计非常棒，用户体验很好！"
     },
     {
       "id": 2,
       "name": "李四",
-      "content": "界面简洁美观，功能实用，是我见过的最好的H5页面之一。",
-      "rating": 5
+      "content": "简洁而现代的设计风格，我很喜欢。"
     }
   ]
 }
